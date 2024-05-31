@@ -1,0 +1,558 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+@keyframes tilt-n-move-shaking {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, 5px) rotate(5deg); }
+    50% { transform: translate(0, 0) rotate(0eg); }
+    75% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+::-webkit-scrollbar {
+    width: 10px;
+} 
+::-webkit-scrollbar-track {
+    background: hsl(0, 0%, 100%);
+}
+::-webkit-scrollbar-thumb {
+    background: hsl(0, 0%, 0%);
+}
+::-webkit-scrollbar-thumb:hover {
+    background:hsl(51, 94%, 48%);
+}
+body{
+    background-color: hsl(0, 11%, 9%);
+    color:hsl(0, 0%, 100%); 
+
+}
+
+.header{
+    background-color:hsl(51, 94%, 48%);
+    color:#ffffff;
+    height: 10vh;
+    position:sticky;
+    top: 0;
+    z-index:10;
+    .navegacion{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left:40px;
+        margin-right: 40px;
+        padding: 1.5rem 0;
+        .anclaLogo{
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.2rem;
+            &:hover{
+                animation: tilt-n-move-shaking 0.25s infinite;
+            }
+        }
+        .listaNav{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            .listaItem{
+                margin-right:20px;
+                .linkNav{
+                    text-decoration: none;
+                    color:#ffffff;
+                    font-weight: 700;
+                    font-size: 1.1rem;
+                    padding: 0.5rem 1rem;
+                    transition: transform 0.3s, box-shadow 0.3s;
+                    &:hover {
+                        transform: scale(0.95);
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                        border-radius: 5px;
+                    }
+                }
+                .linkNav.iniciarSesion{
+                    background-color: #181419;
+                    color: white;
+                    
+                    border-radius: 5px;
+                     transition: transform 0.3s, box-shadow 0.3s;
+                     &:hover {
+                         background-color: hsl(51, 95%, 35%);
+                     }
+                }
+            }
+           
+        }
+    }
+   
+}
+.main{
+    .sectionPrincipal{
+        color:white;
+        background:linear-gradient(to right top, #0000008a, #0000008a), url(Ima/pochos.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        .tituloPrincipal{
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .subtituloPrincipal{
+            font-size: 2.2rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+        .botonRegistrarse{
+            background-color:hsl(51, 94%, 48%);
+            color: #ffffff;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+             /* Agregar efecto de botón presionado */
+             transition: transform 0.3s, box-shadow 0.3s;
+             &:hover {
+                 background-color: hsl(51, 95%, 35%);
+                 transform: scale(0.95);
+                 box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+             }
+        }
+    }
+    .buscadorPrincipal{
+        background-color: hsl(0, 0%, 0%);
+        color:rgb(255, 255, 255);
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        .tituloSection{
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .buscadorPeliculas{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+            .inputBuscador{
+                border: 2px solid white;
+                border-radius: 25px;
+                color: #000000;
+                font-size: 1.2rem;
+                height: 50px;
+                margin: 20px 0px;
+                outline: none;
+                padding: 0px 20px;
+                width: 500px;
+            }
+            .botonBuscador{
+                background-color:hsl(51, 94%, 48%);
+                display: inline-block;
+                color:#ffffff;
+                height: 50px;
+                margin: 20px 10px;
+                padding:0 20px;
+                border-radius: 25px;
+                font-size: 1.2rem;
+                font-weight: 700;
+                border: 2px solid white;
+                text-align: center;
+                 /* Agregar efecto de botón presionado */
+                 transition: transform 0.3s, box-shadow 0.3s;
+                 &:hover {
+                     background-color: hsl(51, 94%, 48%);
+                     transform: scale(0.95);
+                     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+                 }
+            }
+        }
+       
+    }
+    .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--container-color);
+    padding: 8px 14px;
+    border: 1px solid hsl(200 100% 99% / 5%);
+    margin-bottom: 2rem;
+    }
+    .heading-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    }
+  .movie-box {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+  }
+  .movie-box-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .movie-box .box-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 14px;
+    background: linear-gradient(
+      8deg,
+      hsl(240 17% 14% / 74%) 14%,
+      hsl(240 17% 14% / 14%) 44%
+    );
+    overflow: hidden;
+  }
+  .tituloPelicula {
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
+  .generopelicula {
+    font-size: 0.938rem;
+  }
+  .play-btn {
+    position: absolute;
+    bottom: 0.8rem;
+    right: 0.8rem;
+  }
+  .swiper-btn {
+    display: flex;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: static !important;
+    margin: 0 0 0 10px !important;
+  }
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    color: var(--text-color);
+    font-size: 18px !important;
+    font-weight: 700;
+  }
+  .tendencias .heading {
+    padding: 10px 14px;
+  }
+  .tendencias-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(247px, 1fr));
+    gap: 1.5rem;
+  }
+  .tendencias-content .movie-box:hover .movie-box-img {
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+  .next-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5rem;
+  }
+  .next-btn {
+    background: var(--main-color);
+    padding: 12px 20px;
+    color: var(--text-color);
+    font-weight: 300;
+  }
+  .next-btn:hover {
+    background: var(--hover-color);
+    transition: 0.3s all linear;
+  }
+    .peliculasTendencia{
+        width:80%;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 10px;
+        .tituloSection{
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }       
+    } 
+     
+}
+
+@media (max-width: 768px) {
+    .main{
+        .sectionPrincipal{
+            height: 60vh;
+            .tituloPrincipal{
+                font-size: 2.5rem;
+            }
+            .subtituloPrincipal{
+                font-size: 1.5rem;
+            }
+            .botonRegistrarse{
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
+        }
+        .buscadorPrincipal{
+            height: 30vh;
+            .tituloSection{
+                font-size: 1.6rem;
+            }
+            .buscadorPeliculas{
+                .inputBuscador{
+                    font-size: 1rem;
+                    height: 40px;
+                    width: 300px;
+                }
+                .botonBuscador{
+                    height: 40px;
+                    padding:0 15px;
+                    font-size: 1rem;
+                }
+            }
+        }
+        .peliculasTendencias{
+            width: 95%;
+            .tituloSection{
+                font-size: 2rem;
+            }
+            .peliculas{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .boton{
+                padding: 0.8rem 0.8rem;
+                font-size: 0.8rem;
+            }
+        }
+        .peliculasAclamadas{
+            .aclamadasSection{
+                font-size: 2rem;
+            }
+            .aclamadas{
+                .peliculaItem{
+                    width: 150px;
+                    min-width: 150px;
+                    font-size: 15px;
+                    margin-left: 20px;
+                    .imgAclamada{
+                        width: 90%;
+                        height: 90%;
+                    }
+                }
+            }
+        }
+    }
+}
+.footer{
+    background-color:hsl(51, 94%, 48%);
+    color:#ffffff;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .listaNav{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        .listaItem{
+            margin-left:20px;
+            .linkNav{
+                text-decoration: none;
+                color:#ffffff;
+                font-weight: 700;
+                font-size: 1.2rem;
+            }
+            .administradorPeliculas{
+                background-color: #181419;
+                color: white;
+                padding: 0.5rem 1rem;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+.bodyRegistrarse{
+    height: 110vh;
+    background:linear-gradient(to right top, #453b0273,hsla(0, 0%, 14%, 0.451)),url("Ima/proyector.jpg");
+    background-size: cover;
+    background-position: center;
+    .headerRegistrarse{
+        color:#ffffff;
+        height: 5vh;
+        padding:25px;
+        .anclaLogo{
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.2rem;
+            &:hover{
+                animation: tilt-n-move-shaking 0.25s infinite;
+            }
+        }
+    }
+    .main{
+        .seccionRegistrarse{
+            background-color:hsl(0, 0%, 9%);
+            width: 30%;
+            margin:0 auto;
+            border-radius: 5px;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            font-size:1.2rem;
+            .tituloRegistrarse{
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+            form{
+                width: 100%;
+                padding:40px;
+                input:not(.check,.boton),select{
+                    width: 100%;
+                    margin-bottom: 10px;
+                    height: 40px;
+                    padding: 0px 20px;
+                    font-size: 1.2rem;
+                    border-radius: 20px;
+                    border: 2px solid hsl(51, 94%, 48%);
+                    background-color: hsl(0, 0%, 100%);
+                    outline: none;
+                    color:rgb(0, 0, 0);
+                }
+                .error input:not(.check,.boton),.error select{
+                    border: 1px solid hsl(0, 100%, 50%);
+                }
+                .error-text{
+                    color: hsl(0, 100%, 50%);
+                    font-size: 0.8rem;
+                    margin-top:0px;
+                    margin-bottom: 10px;
+                }
+              
+                .terminos{
+                    font-size: 0.8rem;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 20px;
+                    .textoCheck{
+                        margin-left: 10px;
+                    }
+                }
+                .boton{
+                    width: 87%;
+                    box-sizing: content-box;
+                    background-color:hsl(51, 94%, 48%);
+                    border: 2px solid hsl(0, 0%, 100%);
+                    color: #ffffff;
+                    padding: 1rem 1rem;
+                    border-radius: 5px;
+                    font-size: 1rem;
+                    font-weight: 500;
+                   
+                }
+                .ayuda{
+                    margin-top:40px;
+                    font-size: 1rem;
+                    text-decoration: none;
+                    color: #787878;
+                    font-weight:300;
+                   
+                }
+            }
+           
+        }
+   
+    }
+}
+
+.prinTrailer{
+
+        .descripcionTrailer{
+            padding-top:50px;
+            background:linear-gradient(to right top, #6d6969a7, #6c6d69a7), url("Ima/pelicula-7.jpg");
+             background-size: cover;
+            background-position: center;
+            height: 40vh;}
+        .contenedorTrailer
+                {
+                width:75%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                column-gap: 60px;
+                }
+            .ImaTrailer{
+              border-radius: 20px;
+                }
+            .textoTrailer{
+                h1{
+                    font-size: 2.2rem;
+                    font-weight: 700;
+                }
+                h2{
+                    margin-top:20px;
+                }
+                .contenedorCreditos{
+                    margin-top:20px;
+                    display: flex;
+                    justify-content:space-between;
+                }
+            }
+    .trailer{
+        padding-top:150px;
+        padding-bottom: 100px;
+        width:75%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 70px;
+            .contenedorInfo{
+                .redes{
+                margin-bottom: 20px;
+                    ul{
+                    list-style: none;
+                    display: flex;
+                    column-gap: 20px;
+                        li{
+                            a{
+                            text-decoration: none;
+                            color: #ffffff;
+                            font-size: 2.5rem;
+                            margin-right: 50px;
+                            }
+                        }
+                        
+                    }   
+                }
+                    .informacion{
+                        table{
+                            width: 100%;
+                            tr{
+                                td{
+                                font-size: 1.2rem;
+                                padding: 10px 0px;
+                                }
+                            }
+                        }
+                    }
+            }   }
+        }  

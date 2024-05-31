@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión | Cachoscines</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/Ima/fav-icon.png" type="image/x-icon">
+</head>
+<body class="bodyRegistrarse">
+    <header class="headerRegistrarse">
+        <a class="anclaLogo" href="index.html">
+            <i class='bx bx-film' aria-hidden="true"></i>
+            <span>Cachoscines</span>
+        </a>
+    </header>
+    <main id="main" class="main">
+        <section data-aos="zoom-in" data-aos-duration="1000" class="seccionRegistrarse">
+            <form action="" method="get">
+                <h2 class="tituloRegistrarse">Iniciar Sesión</h2>
+                <div>
+                    <input type="email" placeholder="Email" id="email" name="email">
+                    <div class="error-text"></div>
+                </div>
+                <div>
+                    <input type="password" placeholder="Contraseña" id="password" name="password">
+                    <div class="error-text"></div>
+                </div>
+                <div>
+                    <input class="boton" type="submit" value="Iniciar Sesión">
+                </div>
+                <div>
+                    <a id="ayuda" class="ayuda" href="registro.html">Registrarse</a>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="rdu.js"></script>
+</body>
+</html>
